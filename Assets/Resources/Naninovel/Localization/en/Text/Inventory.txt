@@ -1,0 +1,3 @@
+; Russian <ru> to English <en> localization document for `Inventory` managed text document
+
+TitleLabel: INVENTORY

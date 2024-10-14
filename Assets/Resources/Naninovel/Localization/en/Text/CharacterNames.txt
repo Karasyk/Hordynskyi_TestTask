@@ -1,0 +1,7 @@
+; Russian <ru> to English <en> localization document for `CharacterNames` managed text document
+
+Cat: Cat
+Crow: Crow
+Dog: Dog
+Player: {PlayerName}
+Toy: Toy

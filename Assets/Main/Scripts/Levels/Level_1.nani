@@ -1,0 +1,148 @@
+
+@Back Level_1
+@char Dog.Default
+
+; Развилка
+@goto .DogChosen        if:Chosen==1
+@goto .CatChosen        if:Chosen==2
+@goto .SelfChosen       if:Chosen==3
+@goto .FirstDialogue    if:QuestID==0
+@goto .WithoutToyCat    if:QuestID==2
+@goto .ReturnWithToy    if:HaveToy
+@goto .ReturnWithoutToy if:!HaveToy
+
+
+
+#FirstDialogue
+; Встречает собака
+@wait 1
+@char Dog.Happy
+Dog: Привет человек!
+Dog: Как тебя з-ав-ут?
+
+; Игрок вводит своё имя
+@hidePrinter 
+@input PlayerName summary:"Введите своё имя"
+@stop
+Player: Можешь звать меня {PlayerName}.
+@char Dog.Happy
+Dog: Очень приятно {PlayerName}.
+@char Dog.Sad
+Dog: Я потерял свою игруууууушку, поможешь её найти, пожалуйста.
+Player: Конечно, как она выглядит?
+@char Dog.Happy
+Dog: Урраф!
+@char Dog.Default
+Dog: Это небольшой мячик.
+Player: Хорошо я поищу его. Откуда мне начать?
+@char Dog.Sad
+Dog: Последний раз я играл с ним в парке но там пролетала ворона и вот я здесь.
+Player: Хорошо, там и начну, а ты оставайся здесь и ни каких ворон!
+@char Dog.Happy
+Dog: Хорошо.
+
+
+; Выдача квеста на поиск игрушки
+@set "CurrentQuest=\"Найти игрушку\""
+@set "CurrentQuestDescription=\"Я повстречал пса, который потерял свой мяч. Не могу же я отказать миленькой собачке в беде. По его словам, последний раз он видел мяч в парке, может кто-то мог видеть куда делся мяч.\""
+@showUI QuestCurrentUI
+
+; Открываем доступ к карте
+Player: Пойду в парк на поиски мяча, пока этот ветреный пёс не убежал за очередной вороной.
+@showUI MapIconUI
+@set QuestID=1
+@stop
+
+
+
+; Возврат на локацию без предмета
+#ReturnWithoutToy
+@char Dog.Default
+Dog: Ты нашел мяч?
+Player: Пока ещё нет.
+Dog: Я буду ждать.
+@stop
+
+#WithoutToyCat
+@char Dog.Default
+@char Cat.Default
+Dog: Ты нашел мяч?
+Player: Пока ещё нет
+Cat: ...
+Dog: Я буду ждать.
+@stop
+
+; Возврат на локацию с предметом
+#ReturnWithToy
+@char Dog.Default
+@char Cat.Default
+Dog: Ты нашел мяч?
+Cat: Похоже на то
+Player: Да, вот он.
+Cat: И кому же ты его отдашь?
+
+@hidePrinter
+@char Toy.Default pos:50,0
+@choice handler:ButtonArea button:Buttons/ToyToDog goto:.ToyToDog
+@choice handler:ButtonArea button:Buttons/ToyToCat goto:.ToyToCat
+@choice handler:ButtonArea button:Buttons/ToyToSelf goto:.ToyToSelf
+@stop
+
+;Chosen=1 is for Dog
+;Chosen=2 is for Cat
+;Chosen=3 is for Self
+#ToyToDog
+@hide Toy time:0.3 remove:true
+@set Chosen=1
+@set QuestID=0
+@hideUI QuestCurrentUI
+
+@char Dog.Happy
+Dog: Урраф, спасибо!
+Cat: Ну и ладно, никакого веселья с вами не видать.
+@hide Cat
+Player: Хорошо что я сделал правильный выбор.
+@stop
+
+#ToyToCat
+@hide Toy time:0.3 remove:true
+@set Chosen=2
+@set QuestID=0
+@hideUI QuestCurrentUI
+
+@char Dog.Sad
+Dog: Неееет! Мой мячик!!!
+@char Cat.Happy 
+Cat: Хахаха, спасибо за игрушку дурачина!
+@hide Cat
+Player: Зря я поверил тому котяре.
+@stop
+
+#ToyToSelf
+@hide Toy time:0.3 remove:true
+@set Chosen=3
+@set QuestID=0
+@hideUI QuestCurrentUI
+
+@char Dog.Sad
+Player: Я не знаю чей он и чтобы никого не расстраивать я его оставлю себе!
+Dog: Неееет! Мой мячик!!!
+Cat: Ну и ладно, никакого веселья с вами не видать.
+@hide Cat
+Dog: Аууууу!!!
+@stop
+
+#DogChosen
+@char Dog.Happy
+Dog: Спасибо тебе, {PlayerName}, благодоря тебе мой мячик теперь со мной! Я его никогда больше не потеряю, обещаю!
+@stop
+
+#CatChosen
+@char Dog.Sad
+Dog: Говорила мне мама что не стоит верить человекам, видимо не зря.
+@stop
+
+#SelfChosen
+@char Dog.Sad
+Dog: Я надеюсь ты наиграешься вдоволь с МОИМ мячем!
+@stop

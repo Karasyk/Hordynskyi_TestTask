@@ -1,0 +1,14 @@
+#OpenInventory
+@hideUI MapIconUI
+@hideUI QuestCurrentUI
+@hideUI InventoryIconUI
+@hidePrinter 
+@showUI InventoryUI
+@stop
+
+#CloseInventory
+@hideUI InventoryUI
+@showUI MapIconUI
+@showUI QuestCurrentUI if:QuestID>0
+@showUI InventoryIconUI
+@stop

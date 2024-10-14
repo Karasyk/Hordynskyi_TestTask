@@ -1,0 +1,34 @@
+
+@back Level_3
+@char Crow.Default
+Crow: О! Человек, привет!
+Player: Слишком ты приветливая как для воришки.
+Crow: Разве я воришка?
+Player: Ну да! ТЫ украла мячик.
+Crow: Да нет, пёс его оставил, а сам убежал. Вот я и решила поиграть с мячиком, а потом отдать псу. С мячиком я наигралась, а вот пса не могу никак найти. Да и оставлять его просто так тут не хочу, совестно мне теперь что сразу не вернула игрушку псу.
+Player: Я знаю где пёс, и пришел чтобы забрать мяч.
+@char Crow.Happy
+Crow: ПРАВДА!?
+@char Crow.Default
+Crow: Это хорошо, забирай его.
+@char Toy.Default
+@hidePrinter
+@choice handler:ButtonArea button:Buttons/GetBall goto:.TakeToy
+@stop
+
+#TakeToy
+@hide Toy time:0.3 remove:true
+@set HaveToy=true
+@addItem Toy
+@showUI InventoryIconUI
+@set Level_3_Available=false
+Player: Ты довольно милая ворона, как нибудь принесу тебе хлеба.
+@set "CurrentQuest=\"Вернуть мяч\""
+@set "CurrentQuestDescription=\"Я наконец получил мяч, стоит решить кому отдать ему отдать его.\""
+@set QuestID=3
+@char Crow.Happy
+Crow: О! Спасибо, буду с нетерпением ждать!
+@wait 1
+@char Crow.Default
+
+@stop

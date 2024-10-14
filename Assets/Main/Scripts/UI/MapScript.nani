@@ -1,0 +1,42 @@
+
+#OpenMap
+@hideUI QuestCurrentUI
+@hideUI MapIconUI
+@hideUI InventoryIconUI
+@hideAll
+
+@back Map
+;@showUI MapUI
+@choice handler:ButtonArea button:MapButtons/Level_1  goto:.OpenLevel_1
+@choice handler:ButtonArea button:MapButtons/Level_2  goto:.OpenLevel_2
+@choice handler:ButtonArea button:MapButtons/Level_3  goto:.OpenLevel_3 if:Level_3_Available
+
+@stop
+
+
+#OpenLevel_1
+;@hideUI MapUI
+@showUI MapIconUI
+@showUI QuestCurrentUI if:QuestID>0
+@showUI InventoryIconUI if:QuestID>=3
+@goto Level_1
+
+@stop
+
+#OpenLevel_2
+;@hideUI MapUI
+@showUI MapIconUI
+@showUI QuestCurrentUI if:QuestID>0
+@showUI InventoryIconUI if:QuestID>=3
+@goto Level_2
+
+@stop
+
+#OpenLevel_3
+;@hideUI MapUI
+@showUI MapIconUI
+@showUI QuestCurrentUI if:QuestID>0
+@showUI InventoryIconUI if:QuestID>=3
+@goto Level_3
+
+@stop

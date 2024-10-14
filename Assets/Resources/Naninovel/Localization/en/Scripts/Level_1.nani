@@ -1,0 +1,153 @@
+; Russian <ru> to English <en> localization document for `Level_1` naninovel script
+
+# dfe2888b
+; Dog: Привет человек!
+Dog: Hello, human!
+
+# 2a67363a
+; Dog: Как тебя з-ав-ут?
+Dog: What is your name?
+
+# 40ae3d13
+; @input PlayerName summary:"Введите своё имя"
+@input PlayerName summary:"Please enter your name."
+
+# f2a9639
+; Player: Можешь звать меня {PlayerName}.
+Player: You can call me {PlayerName}.
+
+# fd1bf9bb
+; Dog: Очень приятно {PlayerName}.
+Dog: Nice to meet you, {PlayerName}.
+
+# 4b6597b7
+; Dog: Я потерял свою игруууууушку, поможешь её найти, пожалуйста.
+Dog: I lost my little game, can you help me find it, please?
+
+# 4cb70d8b
+; Player: Конечно, как она выглядит?
+Player: Of course, what does it look like?
+
+# 9af1172
+; Dog: Урраф!
+Dog: Yay!
+
+# 50568df9
+; Dog: Это небольшой мячик.
+Dog: It's a small ball.
+
+# 9f967a0
+; Player: Хорошо я поищу его. Откуда мне начать?
+Player: Okay, I'll look for it. Where should I start?
+
+# 161bdcda
+; Dog: Последний раз я играл с ним в парке но там пролетала ворона и вот я здесь.
+Dog: The last time I played with it was in the park, but a crow flew by, and here I am.
+
+# 419e08a4
+; Player: Хорошо, там и начну, а ты оставайся здесь и ни каких ворон!
+Player: Alright, I'll start there, and you stay here and watch out for any crows!
+
+# d3a1a717
+; Dog: Хорошо.
+Dog: Okay.
+
+# 759c27d5
+; Player: Пойду в парк на поиски мяча, пока этот ветреный пёс не убежал за очередной вороной.
+Player: I'll go to the park to look for the ball before that windy dog runs off after another crow.
+
+# 7b604af3
+; Dog: Ты нашел мяч?
+Dog: Did you find the ball?
+
+# 72bc0f0f
+; Player: Пока ещё нет.
+Player: Not yet.
+
+# d1853abc
+; Dog: Я буду ждать.
+Dog: I'll be waiting.
+
+# 7b604af3
+; Dog: Ты нашел мяч?
+Dog: Did you find the ball?
+
+# 17bc5b2e
+; Player: Пока ещё нет
+Player: Not yet.
+
+# f523ce0f
+; Cat: ...
+Cat: ...
+
+# d1853abc
+; Dog: Я буду ждать.
+Dog: I'll be waiting.
+
+# 7b604af3
+; Dog: Ты нашел мяч?
+Dog: Did you find the ball?
+
+# b7179591
+; Cat: Похоже на то
+Cat: Looks like it.
+
+# 49006
+; Player: Да, вот он.
+Player: Yes, here it is.
+
+# 86f3bb47
+; Cat: И кому же ты его отдашь?
+Cat: And who will you give it to?
+
+# c05480cc
+; Dog: Урраф, спасибо!
+Dog: Yay, thank you!
+
+# bad62958
+; Cat: Ну и ладно, никакого веселья с вами не видать.
+Cat: Well, it seems there's no fun to be had with you.
+
+# 8d566594
+; Player: Хорошо что я сделал правильный выбор.
+Player: I'm glad I made the right choice.
+
+# 4f68e558
+; Dog: Неееет! Мой мячик!!!
+Dog: Noooo! My ball!!!
+
+# 52494394
+; Cat: Хахаха, спасибо за игрушку дурачина!
+Cat: Hahaha, thanks for the toy, silly!
+
+# 203410db
+; Player: Зря я поверил тому котяре.
+Player: I shouldn't have trusted that cat.
+
+# 52c467ff
+; Player: Я не знаю чей он и чтобы никого не расстраивать я его оставлю себе!
+Player: I don't know whose it is, and not to upset anyone, I'll keep it for myself!
+
+# 4f68e558
+; Dog: Неееет! Мой мячик!!!
+Dog: Noooo! My ball!!!
+
+# bad62958
+; Cat: Ну и ладно, никакого веселья с вами не видать.
+Cat: Well, it seems there's no fun to be had with you.
+
+# 9a081205
+; Dog: Аууууу!!!
+Dog: Aaaaah!!!
+
+# 5d3030ad
+; Dog: Спасибо тебе, {PlayerName}, благодоря тебе мой мячик теперь со мной! Я его никогда больше не потеряю, обещаю!
+Dog: Thank you, {PlayerName}, thanks to you my ball is with me now! I will never lose it again, I promise!
+
+# dfe313f1
+; Dog: Говорила мне мама что не стоит верить человекам, видимо не зря.
+Dog: My mom told me not to trust people, and apparently, it wasn't for nothing.
+
+# ff0db230
+; Dog: Я надеюсь ты наиграешься вдоволь с МОИМ мячем!
+Dog: I hope you play enough with MY ball!

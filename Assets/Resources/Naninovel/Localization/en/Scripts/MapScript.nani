@@ -1,0 +1,10 @@
+; Russian <ru> to English <en> localization document for `MapScript` naninovel script
+
+# f78bc88
+; @choice handler:ButtonArea button:MapButtons/Level_1  goto:.OpenLevel_1
+
+# 1ea58608
+; @choice handler:ButtonArea button:MapButtons/Level_2  goto:.OpenLevel_2
+
+# 568fb8b6
+; @choice handler:ButtonArea button:MapButtons/Level_3  goto:.OpenLevel_3 if:Level_3_Available
